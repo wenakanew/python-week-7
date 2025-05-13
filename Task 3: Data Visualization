@@ -1,0 +1,44 @@
+1. Line Chart – Simulated Time-Series Trend (for demo purpose)
+# Add fake time-series data (just for visualization)
+df['day'] = range(1, len(df)+1)
+
+# Line plot showing petal length over days (for all samples)
+plt.figure(figsize=(10, 4))
+sns.lineplot(data=df, x='day', y='petal length (cm)', hue='species')
+plt.title('🌸 Petal Length Over Time (Fake Days)')
+plt.xlabel('Day')
+plt.ylabel('Petal Length (cm)')
+plt.legend(title='Species')
+plt.tight_layout()
+plt.show()
+
+
+2. Bar Chart – Average petal length per species
+plt.figure(figsize=(6, 4))
+sns.barplot(data=df, x='species', y='petal length (cm)', ci=None)
+plt.title('📊 Average Petal Length by Species')
+plt.xlabel('Species')
+plt.ylabel('Average Petal Length (cm)')
+plt.tight_layout()
+plt.show()
+
+
+3. Histogram – Sepal width distribution
+plt.figure(figsize=(6, 4))
+sns.histplot(df['sepal width (cm)'], bins=20, kde=True)
+plt.title('📈 Sepal Width Distribution')
+plt.xlabel('Sepal Width (cm)')
+plt.ylabel('Frequency')
+plt.tight_layout()
+plt.show()
+
+
+4. Scatter Plot – Sepal length vs. Petal length\
+plt.figure(figsize=(6, 4))
+sns.scatterplot(data=df, x='sepal length (cm)', y='petal length (cm)', hue='species')
+plt.title('🌼 Sepal Length vs Petal Length')
+plt.xlabel('Sepal Length (cm)')
+plt.ylabel('Petal Length (cm)')
+plt.legend(title='Species')
+plt.tight_layout()
+plt.show()
