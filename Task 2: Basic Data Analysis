@@ -1,0 +1,13 @@
+# Descriptive statistics
+print("\n📊 Descriptive statistics:")
+print(df.describe())
+
+# Group by species and compute mean
+print("\n📈 Mean of each feature by species:")
+grouped_means = df.groupby('species').mean()
+print(grouped_means)
+
+# Observation
+print("\n🔎 Observations:")
+print("- Setosa has much shorter petals compared to others.")
+print("- Virginica tends to have longer and wider petals.")
